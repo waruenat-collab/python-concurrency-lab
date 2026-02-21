@@ -20,3 +20,11 @@
 ## Conclusion
 - Thread และ asyncio เหมาะกับงานที่ต้องรอ I/O
 - Process Pool เหมาะกับงานคำนวณหนัก
+
+## Result Analysis
+
+- Thread และ asyncio สามารถลดเวลาการทำงานของ I/O-bound tasks
+  จาก ~6 วินาที เหลือ ~2 วินาที
+- asyncio ใช้ resource น้อยกว่า thread และเหมาะกับระบบ async
+- Process Pool ช่วยเพิ่มประสิทธิภาพของ CPU-bound tasks
+  โดยใช้หลาย CPU core พร้อมกัน
